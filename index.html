@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Juego 3 en Raya</title>
+ 
+    <!--El normalize y modernizr se usan como buenas practicas pero el codigo igual puede funcionar sin ellos-->
+	<link rel="stylesheet"
+	href="css/normalize.css">
+	<link rel="stylesheet"
+	href="css/style.css">
+
+	<script type="js/modernizr-custom.js"></script>
+
+	<!--cargar fuente para la pagina desde google font
+	con par en el lado css font-family-->
+	<link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
+
+	<!--icon de la pagina-->
+	<link rel="shortcut icon"
+	href="cross.gif">
+	
+</head>
+
+<body>
+	<!--contenedor para el juego-->
+	<div id="content">
+		<div id="game">
+			<div id="title">
+				<h1>Juego de las 3 en raya</h1>
+			</div>
+			<div id="content_board">
+				<div id="board">
+				
+					<div class="rows">
+						<div class="row">
+							<div id="c02" class="cell" onclick="CheckCell(0,2)"></div>
+							<div id="c12" class="cell" onclick="CheckCell(1,2)"></div>
+							<div id="c22" class="cell" onclick="CheckCell(2,2)"></div>
+						</div>
+				
+
+					
+						<div class="row">
+							<div id="c01" class="cell" onclick="CheckCell(0,1)"></div>
+							<div id="c11" class="cell" onclick="CheckCell(1,1)"></div>
+							<div id="c21" class="cell" onclick="CheckCell(2,1)"></div>
+						</div>
+				
+
+					
+						<div class="row">
+							<div id="c00" class="cell" onclick="CheckCell(0,0)"></div>
+							<div id="c10" class="cell" onclick="CheckCell(1,0)"></div>
+							<div id="c20" class="cell" onclick="CheckCell(2,0)"></div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<!--tener mucho en cuenta el orden en que se 
+	importa los archivos-->
+	<script src="js/check_manager.js"></script>
+	<script src="js/smart.js"></script>
+	<script src="js/autoplay.js"></script>
+
+</body>
+</html>
